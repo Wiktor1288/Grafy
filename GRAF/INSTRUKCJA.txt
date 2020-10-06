@@ -1,0 +1,41 @@
+################################################
+#                                              #
+#     krótka instrukcja oblugi programu        #
+#                                              #
+################################################
+
+1 Aby wygenerować plik ./a.out do uruchomienia programu należy:
+wpisać w terminal g++ funkcje_programu.cpp graf.cpp graf2.cpp main.cpp
+wszystkie pliki łacznie z *.hpp powinny znajdować się w tym samym katalogu
+
+2 po uruchomieniu programu użykownikowy wyświetli się w terminalu menu główne programu
+  menu składa się z:
+   ~1 wczytaj plik == program wczytuje dane z pliku i uzupełnia zmienne w klasach. Aby ponownie wczytać dane należy wyczyścić poprzednie dane za pomocą opcji nr 4 w menu
+
+   ~2 zapis do pliku == opcja pozwala na zapis MIN sciezki z wierzcholka startowego do wszystkich pozostałych w pliku o nazwie podanym przez użytkownika.
+      program uwzględnia możliwość próby zapisu bez wcześniejszego użycia któregoś z algorytmów, informując o tym użytkownika.
+   
+   ~3 generuj graf == opcja pozwala na generacje pliku zawierającego graf o zadanej ilosci wierzchołkow i gęstości.
+
+   ~4 zwolnij pamięć == opcja pozwala na zwolnienie dotychczasowo zajetej pamieci. Wykorzystywana jest podaczas chęci wprowadzenia nowych danych. W przypadku gdy dane nie zostały
+      jescze uzupełnione opcja jest nie dostępna dla użytkownika.
+
+   ~5 budowa grafu == opcja pozwala na wyświetlenie macierzy sąsiedztwa oraz listy sąsiedztwa grafu wcześniej wczytanego z pliku. UWAGA!!!! operacja ta ma sens dla mniejszych grafów (o malej liczbie wierzchołkow)
+
+   ~6 algorytm Djisktry == opcja pozwala na znalezienie najkrótrzej drogi z wierzchołka startowego (zadawanego przez użytkownika podczas wybrania opcji)  do pozostałych wierzchołków. Program uwzględnia 
+      możliwość chęci wykorzystania tej opcji bez wcześniejszego uzupełnienia danych.
+
+   ~7 algorytm Bellmana-Forda == opcja pozwala na znalezienie najkrótrzej drogi z wierzchołka startowego (zadawanego przez użytkownika podczas wybrania opcji)  do pozostałych wierzchołków. Program uwzględnia 
+      możliwość chęci wykorzystania tej opcji bez wcześniejszego uzupełnienia danych.
+  
+   ~8 wyswietl sredni czas == opcja wyswietla sredni czas trwania kazdego algorytmu oraz ilosc wywolan poszczegolnych algorytmow
+
+   ~9 generuj okreslona ilosc plikow == opcja pozwala na wygenerowanie wiekszej ilosci plikow np 100
+
+   ~10 KONIEC DZIAŁANIA PROGRAMU
+
+
+3 Krótkie uwagi dotyczące działania programu:
+Program realizuje algorytm MIN ścieżki dla grafów w postaci listy sąsiedztwa oraz macierzy sąsiedztwa. Formy reprezentacji grafu są uzupełniane jednocześnie po wybraniu opcji nr 1.
+Po wczytanu danych użytkownik może wybrać jeden z dwóch algorytmów, po wybraniu którejś z opcji użytkownikowi wyświetlana jest ścieżka w terminalu wraz z kosztem. Po wybraniu opcji nr 2 uzytkownik może
+zapisać tę ścieżke w pliku tekstowym wybierając która z reprezentacji grafu ma być brana pod uwagę podczas zapisu.
